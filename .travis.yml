@@ -3,7 +3,7 @@ services:
   - docker
 language: generic
 before_install:
-  - docker build -e CI=true -t adamj335/docker-training -f Dockerfile.dev .
+  - docker build -t adamj335/docker-training -f Dockerfile.dev .
 
 
 script:
