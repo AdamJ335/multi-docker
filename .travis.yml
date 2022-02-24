@@ -7,4 +7,4 @@ before_install:
 
 
 script:
-  - docker run adamj335/docker-training npm run test -- --coverage
+  - docker run adamj335/docker-training npm run ci_test -- --coverage
