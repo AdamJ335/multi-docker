@@ -7,7 +7,7 @@ before_install:
 
 
 script:
-  - docker run adamj335/docker-training npm run test -- --coverage
+  - docker run -e CI=true adamj335/docker-training npm run test -- --watchAll=false
 
 deploy:
   provider: elasticbeanstalk
