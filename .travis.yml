@@ -8,3 +8,13 @@ before_install:
 
 script:
   - docker run adamj335/docker-training npm run ci_test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-west-2"
+  app: "docker-react"
+  env: "Dockerreact-env"
+  bucket_name: "elasticbeanstalk-eu-west-2-272440329920"
+  bucket_path: "docker-react"
+  on:
+    branch: section_7
